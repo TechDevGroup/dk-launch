@@ -19,12 +19,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Run a multi-line script
+        env:
+          AZURE_FUNCTION_CODE: &code=xlVZEQ2qqfmDNR1ks8xQrWM6kFpSyjhPuhNXcxiJjKt4v604H9BYmA==
         run: |
           echo Add other actions to build, 
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
           echo ${{github.repositoryUrl}} 
-
+          echo $AZURE_FUNCTION_CODE code!
+          echo https://lp-git-push-rcv.azurewebsites.net/repoName/branchName?key=0$AZURE_FUNCTION_CODE
         # - name: Webhook
         #    uses: distributhor/workflow-webhook
         #      with:
