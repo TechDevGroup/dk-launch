@@ -21,7 +21,7 @@ jobs:
       - name: Run a multi-line script
         env:
           AZURE_FUNCTION_CODE: "&code=xlVZEQ2qqfmDNR1ks8xQrWM6kFpSyjhPuhNXcxiJjKt4v604H9BYmA=="
-          URL: https://lp-git-push-rcv.azurewebsites.net/{{github.repository}}/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
+          URL: https://lp-git-push-rcv.azurewebsites.net/${{github.repository}}/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
         run: |
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
