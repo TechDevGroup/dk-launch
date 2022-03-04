@@ -25,7 +25,6 @@ jobs:
           echo Add other actions to build, 
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
-          echo ${{github.repositoryUrl}} 
-          echo https://lp-git-push-rcv.azurewebsites.net/${{github.repository}}/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
-          echo '${{ toJSON(github) }}'
+          echo ${{github.repositoryUrl}}
+          eho https://lp-git-push-rcv.azurewebsites.net/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
           curl -X POST https://lp-git-push-rcv.azurewebsites.net/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
