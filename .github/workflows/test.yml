@@ -28,5 +28,6 @@ jobs:
           echo $URL
           curl \
           -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
+          -H "Accept: */*" \
+          -H "Content-Length: 0" \
           $URL
