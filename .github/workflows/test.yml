@@ -22,7 +22,6 @@ jobs:
         env:
           AZURE_FUNCTION_CODE: "&code=xlVZEQ2qqfmDNR1ks8xQrWM6kFpSyjhPuhNXcxiJjKt4v604H9BYmA=="
         run: |
-          echo Add other actions to build, 
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
           echo ${{github.repositoryUrl}}
