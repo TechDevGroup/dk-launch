@@ -26,4 +26,7 @@ jobs:
           echo ${{github.ref_name}} 
           echo ${{github.repositoryUrl}}
           echo $URL
-          curl -X POST $URL
+          curl \
+          -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          $URL
