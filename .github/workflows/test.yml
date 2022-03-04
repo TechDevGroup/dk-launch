@@ -26,10 +26,5 @@ jobs:
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
           echo ${{github.repositoryUrl}} 
-          echo $AZURE_FUNCTION_CODE code!
-          echo https://lp-git-push-rcv.azurewebsites.net/repoName/branchName?key=0$AZURE_FUNCTION_CODE
-        # - name: Webhook
-        #    uses: distributhor/workflow-webhook
-        #      with:
-        #      url: "http://amberisgreat.ngrok.io/api/test_pedant"
-        #      json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
+          echo https://lp-git-push-rcv.azurewebsites.net/${{github.repository}}/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
+          curl -X POST https://lp-git-push-rcv.azurewebsites.net/${{github.repository}}/${{github.ref_name}}?key=0$AZURE_FUNCTION_CODE
