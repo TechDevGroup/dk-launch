@@ -29,5 +29,6 @@ jobs:
           curl \
           -X POST \
           -H "Accept: */*" \
+          -H "Some-Token: ${uuidgen}" \
           -H "Content-Length: 0" \
           $URL
