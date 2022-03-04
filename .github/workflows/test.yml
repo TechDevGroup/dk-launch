@@ -25,6 +25,7 @@ jobs:
           echo ${{github.repository}} 
           echo ${{github.ref_name}} 
           echo ${{github.repositoryUrl}}
+          echo again
           echo $URL
           curl \
           -X POST \
