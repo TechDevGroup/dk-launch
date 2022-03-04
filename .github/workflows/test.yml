@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build, $GITHUB_REF {{GITHUB_REF}}
+          echo Add other actions to build, ${{github.event.repository.full_name}}
           echo test, and deploy your project.
 
         # - name: Webhook
